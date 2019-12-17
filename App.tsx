@@ -24,7 +24,7 @@ import Cards from './components/presentation/Card';
 const App = () => {
   const usingHermes = typeof HermesInternal === 'object' && HermesInternal !== null;
   return (
-    <Cards headerText='Header' />
+    <Cards headerText='Header' content='my text'/>
   );
 };
 

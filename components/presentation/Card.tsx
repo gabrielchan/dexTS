@@ -1,41 +1,33 @@
 import React from 'react';
-import {
-  makeStyles,
-  Card, 
-  CardContent,
-  Typography
-} from '@material-ui/core';
+import { StyleSheet } from 'react-native';
+import { 
+  Card,
+  Text,
+} from 'react-native-elements';
 
+export interface Props {
+  headerText: string;
+  content: string;
+}
 
-
-const Cards = ({headerText} : {headerText: string}) => {
-  const matStyles = getStyles()
+const Cards : React.SFC<Props> = (props) => {
   return(
-    <Card>
-      <CardContent>
-        <Typography>
-          {headerText}
-        </Typography>
-      </CardContent>
+    <Card
+      title={props.headerText}>
+      <Text style={styles.content}>
+        {props.content}
+      </Text>
     </Card>
   );
 }
 
-const getStyles = makeStyles({
-  card: {
-    minWidth: 275.
+const styles = StyleSheet.create({
+  header: {
+
   },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
+  content: {
+    marginBottom: 10,
   },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
+})
 
 export default Cards;

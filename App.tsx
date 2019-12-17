@@ -9,16 +9,7 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
 
-import Title from './components/presentation/Title';
 import Cards from './components/presentation/Card';
 
 const App = () => {

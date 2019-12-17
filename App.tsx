@@ -18,21 +18,16 @@ import {
   StatusBar,
 } from 'react-native';
 
-/* import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen'; */
-
-import Title from './components/presentation/title';
+import Title from './components/presentation/Title';
+import Cards from './components/presentation/Card';
 
 const App = () => {
   const usingHermes = typeof HermesInternal === 'object' && HermesInternal !== null;
   return (
-    <Title title='Hello World'/>
+    <Cards headerText='Header' />
   );
 };
+
+//    <Title title='Hello World'/>
 
 export default App;

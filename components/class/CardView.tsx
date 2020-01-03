@@ -2,7 +2,8 @@ import React from 'react';
 import {
   View,
   FlatList,
-  Text
+  Text,
+  StyleSheet
 } from 'react-native';
 import Cards from '../presentation/Card';
 
@@ -36,6 +37,25 @@ const testData = [
   {
     h: "header 5",
     t: "text 5"
+  },
+  {
+    h: "header 6",
+    t: "text 6"
+  },
+  {
+    h: "header 7",
+    t: "text 7"
+  },
+  {
+    h: "header 8",
+    t: "text 8"
+  },
+  {
+    h: "header 9",
+    t: "text 9" 
+  }, {
+    h: "header 10",
+    t: "text 10"
   }
 ]
 
@@ -43,7 +63,7 @@ export default class CardView extends React.Component<Props> {
   cardData = testData;
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <FlatList
           keyExtractor={item => item.h}
           renderItem={({item}) =>
@@ -55,3 +75,11 @@ export default class CardView extends React.Component<Props> {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: 10,
+    marginBottom: 10,
+  },
+})

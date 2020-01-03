@@ -29,15 +29,7 @@ const App = () => {
     }
   ];
   return (
-    <ScrollView>
-      <View>
-        <Cards headerText='First Card' content='First Card Items' />
-        <Cards headerText='Second Card' content='This is the second card that should be stored below' />
-      </View>
-      <View>
-        <CardView blank='' />
-      </View>
-    </ScrollView>
+    <CardView blank='' />
   );
 };
 

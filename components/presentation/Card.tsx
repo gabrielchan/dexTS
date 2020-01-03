@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
   content: {
     marginBottom: 10,
-  },
+  }
 })
 
 export default Cards;

@@ -13,26 +13,14 @@ import {
   View,
   ScrollView,
 } from 'react-native';
-import Cards from './components/presentation/Card';
 import CardView from './components/class/CardView';
+import testData from './test_data/sampleCardData.json'; //testData is a JSON Array (not a JSON Object)
 
 const App = () => {
   const usingHermes = typeof HermesInternal === 'object' && HermesInternal !== null;
-  const testData = [
-    {
-      key: 'key',
-      value: 'value'
-    },
-    {
-      key: 'key2',
-      value: 'value2'
-    }
-  ];
   return (
-    <CardView blank='' />
+    <CardView cardData={testData} />
   );
 };
-
-//    <Title title='Hello World'/>
 
 export default App;

@@ -7,69 +7,48 @@ import {
 } from 'react-native';
 import Cards from '../presentation/Card';
 
-interface Props {
-  blank: string;
-};
-
 /*
-interface State {
-  cardData: [];
+interface Props {
+  cardData: {
+    header: string,
+    content1: string,
+    content2: string
+  }[];
 };
+interface State { 
+}
 */
 
-const testData = [
-  {
-    h: "header 1",
-    t: "text 1"
-  },
-  {
-    h: "header 2",
-    t: "text 2"
-  },
-  {
-    h: "header 3",
-    t: "text 3"
-  },
-  {
-    h: "header 4",
-    t: "text 4"
-  },
-  {
-    h: "header 5",
-    t: "text 5"
-  },
-  {
-    h: "header 6",
-    t: "text 6"
-  },
-  {
-    h: "header 7",
-    t: "text 7"
-  },
-  {
-    h: "header 8",
-    t: "text 8"
-  },
-  {
-    h: "header 9",
-    t: "text 9" 
-  }, {
-    h: "header 10",
-    t: "text 10"
-  }
-]
+type CardItems = {
+  header: string,
+  content1: string,
+  content2: string
+};
 
-export default class CardView extends React.Component<Props> {
-  cardData = testData;
+interface Props extends Array<CardItems> {
+  cardData: CardItems[]
+}
+
+export default class CardView extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.props.cardData.map((CI, index) => {
+      console.log("CI: " + CI);
+      console.log("CI.header " + CI.header);
+      console.log("CI.Habit" + CI.Habit);
+      console.log("index: " + index);
+    });
+  }
   render() {
+    console.log("test prints: " + this.props.cardData[0].header);
     return (
       <View style={styles.container}>
         <FlatList
-          keyExtractor={item => item.h}
+          data={this.props.cardData}
+          keyExtractor={(item) => item.header}
           renderItem={({item}) =>
-            <Cards headerText={item.h} content={item.t}/>
+            <Cards headerText={item.header} content={item.content1}/>
           }
-          data={testData}
         />
       </View>
     );
@@ -82,4 +61,4 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
-})
+});

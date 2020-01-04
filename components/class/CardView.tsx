@@ -6,53 +6,31 @@ import {
   StyleSheet
 } from 'react-native';
 import Cards from '../presentation/Card';
-
-/*
-interface Props {
-  cardData: {
-    header: string,
-    content1: string,
-    content2: string
-  }[];
-};
-*/
-
-type CardItems = {
-  header: string,
-  content1: string,
-  content2: string
-};
+import { CardItems } from '../presentation/Card';
 
 interface Props extends Array<CardItems> {
   cardData: CardItems[]
 }
 
+//to include a state in the future
 interface State {
 
 }
 
 export default class CardView extends React.Component<Props, State> {
+  //leaving the constructor here for now
   constructor(props: Props) {
     super(props);
-    /*
-    this.props.cardData.map((CI, index) => {
-      console.log("CI: " + CI);
-      console.log("CI.header " + CI.header);
-      console.log("CI.Habit " + CI.Habit);
-      console.log("CI.Object.keys() " + Object.keys(CI));
-      console.log("index: " + index);
-    });
-    */
   }
+
   render() {
-    console.log("test prints: " + this.props.cardData[0].header);
     return (
       <View style={styles.container}>
         <FlatList
           data={this.props.cardData}
           keyExtractor={(item) => item.header}
           renderItem={({item}) =>
-            <Cards headerText={item.header} content={item.content1}/>
+            <Cards header={item.header} content={item.content} subcontent={item.subcontent}/>
           }
         />
       </View>

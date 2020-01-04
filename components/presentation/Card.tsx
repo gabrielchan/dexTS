@@ -7,28 +7,34 @@ import {
   Text,
 } from 'react-native-elements';
 
-export interface Props {
-  headerText: string;
-  content: string;
-}
+export interface CardItems {
+  header: string,
+  content: string,
+  subcontent: string
+};
 
-const Cards: React.SFC<Props> = (props) => {
+const Cards: React.SFC<CardItems> = (props) => {
   return (
     <Card
-      title={props.headerText}>
+      title={props.header}>
       <Text style={styles.content}>
         {props.content}
+      </Text>
+      <Text style={styles.subcontent}>
+        {props.subcontent}
       </Text>
     </Card>
   );
 }
 
 const styles = StyleSheet.create({
-  header: {
-
+  subcontent: {
+    marginBottom: 10,
+    fontWeight: "bold"
   },
   content: {
     marginBottom: 10,
+    color: "grey"
   }
 })
 

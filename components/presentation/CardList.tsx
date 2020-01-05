@@ -19,7 +19,7 @@ interface Props {
   cardList: CardItems[];
 }
 
-const CardList: React.SFC<Props> = (props) => {
+const CardList: React.FC<Props> = (props) => {
   return (
     <View style={styles.container}>
       <FlatList

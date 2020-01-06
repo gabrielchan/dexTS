@@ -19,9 +19,10 @@ interface Props {
   cardList: CardItems[];
 }
 
-const CardList: React.FC<Props> = (props) => {
+const CardListScreen: React.FC<Props> = (props) => {
   return (
     <View style={styles.container}>
+      <Text>CardListScreen</Text>
       <FlatList
         data={props.cardList}
         keyExtractor={(item) => item.header}
@@ -55,6 +56,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
-})
+});
 
-export default CardList;
+export default CardListScreen;

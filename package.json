@@ -9,14 +9,19 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-community/masked-view": "^0.1.5",
     "acorn": "^7.1.0",
     "eslint": "^5.16.0",
     "node": "^8.17.0",
-    "react": "^16.9.0",
+    "react": "^16.8.6",
     "react-dom": "^16.12.0",
-    "react-native": "0.61.5",
+    "react-native": "^0.60.6",
     "react-native-elements": "^1.2.7",
+    "react-native-gesture-handler": "^1.5.3",
+    "react-native-safe-area-context": "^0.6.2",
     "react-native-vector-icons": "^6.6.0",
+    "react-navigation": "^4.0.10",
+    "react-navigation-stack": "^2.0.8",
     "typeface-roboto": "0.0.75"
   },
   "devDependencies": {

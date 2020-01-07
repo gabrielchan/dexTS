@@ -12,6 +12,8 @@
     "@react-native-community/masked-view": "^0.1.5",
     "acorn": "^7.1.0",
     "eslint": "^5.16.0",
+    "mobx": "^5.15.1",
+    "mobx-react": "^6.1.4",
     "node": "^8.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.12.0",

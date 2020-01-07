@@ -29,6 +29,10 @@ const SplashView: React.FC<Props> = (props) => {
           title="Go to CardList"
           onPress={() => props.navigation.navigate('CardList')}
         />
+        <Button
+          title="Go to PlusMinus"
+          onPress={() => props.navigation.navigate('PlusMinus')}
+        />
       </View>
     </View>
   );

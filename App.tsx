@@ -13,7 +13,6 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import CardListView from './components/presentation/CardListView';
 import SplashView from './components/presentation/SplashView';
-import PlusMinusView from './components/class/PlusMinusView';
 
 /*
 import testData from './test_data/sampleCardData.json'; //testData is a JSON Array (not a JSON Object)
@@ -32,7 +31,6 @@ const MainNavigator = createStackNavigator(
   {
     Splash: { screen: SplashView },
     CardList: { screen: CardListView },
-    PlusMinus: { screen: PlusMinusView },
   },
   {
     initialRouteName: 'Splash',

@@ -3,6 +3,7 @@ import {
   StyleSheet,
   View,
   FlatList,
+  Button,
 } from 'react-native';
 import {
   Card,
@@ -19,9 +20,10 @@ interface Props {
   cardList: CardItems[];
 }
 
-const CardList: React.FC<Props> = (props) => {
+const CardListScreen: React.FC<Props> = (props) => {
   return (
     <View style={styles.container}>
+      <Text>Card List Screen !!!</Text>
       <FlatList
         data={props.cardList}
         keyExtractor={(item) => item.header}
@@ -55,6 +57,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
-})
+});
 
-export default CardList;
+export default CardListScreen;

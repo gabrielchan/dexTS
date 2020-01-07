@@ -23,7 +23,6 @@ interface Props {
 const CardListView: React.FC<Props> = (props) => {
   return (
     <View style={styles.container}>
-      <Text>Card List View !!!</Text>
       <FlatList
         data={props.cardList}
         keyExtractor={(item) => item.header}

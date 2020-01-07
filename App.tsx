@@ -34,7 +34,17 @@ const MainNavigator = createStackNavigator(
   },
   {
     initialRouteName: 'Splash',
-  }
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+      tabBarLabel: 'Main Stack Nav',
+    },
+  },
 );
 
 const App = () => {

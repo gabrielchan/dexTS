@@ -3,6 +3,7 @@ import {
   StyleSheet,
   View,
   FlatList,
+  Button,
 } from 'react-native';
 import {
   Card,
@@ -22,7 +23,7 @@ interface Props {
 const CardListScreen: React.FC<Props> = (props) => {
   return (
     <View style={styles.container}>
-      <Text>CardListScreen</Text>
+      <Text>Card List Screen !!!</Text>
       <FlatList
         data={props.cardList}
         keyExtractor={(item) => item.header}

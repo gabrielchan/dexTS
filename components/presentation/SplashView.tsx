@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 const navigationOptions = {
-  title: 'SplashScreen',
+  title: 'SplashView',
 };
 
 interface Props {
@@ -16,7 +16,7 @@ interface Props {
   navigationOptions?: Object;
 }
 
-const SplashScreen: React.FC<Props> = (props) => {
+const SplashView: React.FC<Props> = (props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Hardcoded Text</Text>
@@ -51,4 +51,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SplashScreen;
+export default SplashView;

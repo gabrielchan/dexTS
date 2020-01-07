@@ -11,8 +11,8 @@
 import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import CardListScreen from './components/presentation/CardListScreen';
-import SplashScreen from './components/presentation/SplashScreen';
+import CardListView from './components/presentation/CardListView';
+import SplashView from './components/presentation/SplashView';
 
 /*
 import testData from './test_data/sampleCardData.json'; //testData is a JSON Array (not a JSON Object)
@@ -29,8 +29,8 @@ const App = () => {
 
 const MainNavigator = createStackNavigator(
   {
-    Splash: { screen: SplashScreen },
-    CardList: { screen: CardListScreen },
+    Splash: { screen: SplashView },
+    CardList: { screen: CardListView },
   },
   {
     initialRouteName: 'Splash',

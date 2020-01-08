@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   StyleSheet,
@@ -9,24 +9,21 @@ import {
   Text,
 } from 'react-native-elements';
 
-interface Props {
-  counter: number,
-}
-
-const CounterView: React.FC<Props> = (props) => {
+const CounterView = () => {
+  const [count, setCount] = React.useState(0);
   return (
     <View style={styles.container}>
       <Text style={styles.header}>mobx-react-lite Counter</Text>
-      <Text style={styles.header}>{props.counter}</Text>
+      <Text style={styles.header}>{count}</Text>
       <View style={styles.buttonContainer}>
         <Button
           title="+"
-          onPress={() => Alert.alert('Will increment in future')}
+          onPress={() => setCount(count + 1)}
           buttonStyle={styles.button}
         />
         <Button
           title="-"
-          onPress={() => Alert.alert('Will decrement in future')}
+          onPress={() => setCount(count - 1)}
           buttonStyle={styles.button}
         />
       </View>

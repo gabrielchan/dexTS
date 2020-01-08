@@ -3,7 +3,6 @@ import {
   StyleSheet,
   View,
   FlatList,
-  Button,
 } from 'react-native';
 import {
   Card,

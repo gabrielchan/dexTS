@@ -30,6 +30,10 @@ const SplashView: React.FC<Props> = (props) => {
           title="Go to CardList"
           onPress={() => props.navigation.navigate('CardList')}
         />
+        <Button
+          title="Go to Counter"
+          onPress={() => props.navigation.navigate('Counter')}
+        />
       </View>
     </View>
   );
@@ -45,7 +49,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+    margin: 10
   },
 });
 

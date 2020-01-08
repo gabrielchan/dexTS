@@ -1,11 +1,12 @@
 import React from 'react';
 import {
   View,
-  Text,
   StyleSheet,
-  Button,
   Alert,
 } from 'react-native';
+import {
+  Button
+} from 'react-native-elements';
 import TextView from './TextView';
 
 const navigationOptions = {
@@ -25,14 +26,17 @@ const SplashView: React.FC<Props> = (props) => {
         <Button
           title="Test Button"
           onPress={() => Alert.alert('Button Press Successful')}
+          buttonStyle={styles.button}
         />
         <Button
           title="Go to CardList"
           onPress={() => props.navigation.navigate('CardList')}
+          buttonStyle={styles.button}
         />
         <Button
           title="Go to Counter"
           onPress={() => props.navigation.navigate('Counter')}
+          buttonStyle={styles.button}
         />
       </View>
     </View>
@@ -52,6 +56,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     margin: 10
   },
+  button: {
+    margin: 5,
+  }
 });
 
 export default SplashView;

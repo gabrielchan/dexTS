@@ -25,7 +25,7 @@ const TextView = () => {
         1. My <Text style={{ fontWeight: 'bold' }}>curiosity</Text> for knowledge{'\n'}
         2. Being <Text style={{ fontWeight: 'bold' }}>honest</Text> to myself about my capabilities in light of other's opinions{'\n'}
         3. <Text style={{ fontWeight: 'bold' }}>Empathsizing</Text> with my desires to look out for my best interest{'\n'}
-        4. <Text style={{ fontWeight: 'bold' }}>Respecting</Text> and loving myself
+        4. <Text style={{ fontWeight: 'bold' }}>Respecting</Text> and loving myself{'\n'}
         5. My <Text style={{ fontWeight: 'bold' }}>independence</Text> and learning how to take care of myself
       </Text>
     </View>

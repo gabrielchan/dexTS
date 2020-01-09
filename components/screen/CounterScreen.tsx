@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import {
   View,
   StyleSheet,
-  Alert,
 } from 'react-native';
 import {
   Button,
   Text,
 } from 'react-native-elements';
 
-const CounterView = () => {
+const CounterScreen = () => {
   const [count, setCount] = React.useState(0);
   return (
     <View style={styles.container}>
@@ -56,4 +55,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default CounterView;
+export default CounterScreen;

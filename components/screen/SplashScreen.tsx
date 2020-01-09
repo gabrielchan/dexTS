@@ -7,7 +7,7 @@ import {
 import {
   Button
 } from 'react-native-elements';
-import TextView from './TextView';
+import Paragraph from '../presentation/Paragraph';
 
 const navigationOptions = {
   title: 'SplashView',
@@ -18,10 +18,10 @@ interface Props {
   navigationOptions?: Object;
 }
 
-const SplashView: React.FC<Props> = (props) => {
+const SplashScreen: React.FC<Props> = (props) => {
   return (
     <View style={styles.container}>
-      <TextView />
+      <Paragraph />
       <View style={styles.buttonContainer}>
         <Button
           title="Test Button"
@@ -61,4 +61,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SplashView;
+export default SplashScreen;

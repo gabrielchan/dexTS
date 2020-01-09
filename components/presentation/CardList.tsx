@@ -19,7 +19,7 @@ interface Props {
   cardList: CardItems[];
 }
 
-const CardListView: React.FC<Props> = (props) => {
+const CardList: React.FC<Props> = (props) => {
   return (
     <View style={styles.container}>
       <FlatList
@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CardListView;
+export default CardList;

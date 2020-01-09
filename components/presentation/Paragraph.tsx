@@ -5,7 +5,7 @@ import {
   StyleSheet
 } from 'react-native';
 
-const TextView = () => {
+const Paragraph = () => {
   return (
     <View style={styles.textContainer}>
       <Text style={styles.title}>Values</Text>
@@ -44,4 +44,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TextView;
+export default Paragraph;

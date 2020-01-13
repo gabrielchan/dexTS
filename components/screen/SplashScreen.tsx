@@ -30,7 +30,7 @@ const SplashScreen: React.FC<Props> = (props) => {
         />
         <Button
           title="Go to CardList"
-          onPress={() => props.navigation.navigate('CardList')}
+          onPress={() => props.navigation.navigate('UnhelpfulThoughts')}
           buttonStyle={styles.button}
         />
         <Button

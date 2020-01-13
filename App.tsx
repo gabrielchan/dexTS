@@ -11,7 +11,7 @@
 import React from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import CardListScreen from './components/screen/CardListScreen';
+import UnhelpfulThoughtsScreen from './components/screen/UnhelpfulThoughtsScreen';
 import SplashScreen from './components/screen/SplashScreen';
 import CounterScreen from './components/screen/CounterScreen';
 
@@ -31,7 +31,7 @@ const App = () => {
 const MainNavigator = createStackNavigator(
   {
     Splash: { screen: SplashScreen },
-    CardList: { screen: CardListScreen },
+    UnhelpfulThoughts: { screen: UnhelpfulThoughtsScreen },
     Counter: { screen: CounterScreen },
   },
   {

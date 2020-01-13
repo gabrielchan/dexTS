@@ -1,10 +1,11 @@
 import React from 'react'
-import CardList from '../presentation/CardList';
-import testData from '../../test_data/sampleCardData.json';
+import CardList from '../presentation/CardList'
+import MainDecoder from '../../service/MainDecoder';
 
 const CardListScreen = () => {
+  const thoughtsArray = MainDecoder("Unhelpful Thoughts");
   return(
-    <CardList cardList={testData}/>
+    <CardList cardList={thoughtsArray}/>
   );
 }
 

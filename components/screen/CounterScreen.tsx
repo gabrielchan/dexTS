@@ -9,7 +9,7 @@ import {
 } from 'react-native-elements';
 
 const CounterScreen = () => {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
   return (
     <View style={styles.container}>
       <Text style={styles.header}>React-Native 6.0+ Hook Based Counter</Text>

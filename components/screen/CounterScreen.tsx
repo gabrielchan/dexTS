@@ -7,8 +7,9 @@ import {
   Button,
   Text,
 } from 'react-native-elements';
+import { NavigationStackScreenComponent } from 'react-navigation-stack';
 
-const CounterScreen = () => {
+const CounterScreen: NavigationStackScreenComponent = () => {
   const [count, setCount] = useState(0);
   return (
     <View style={styles.container}>
@@ -29,6 +30,10 @@ const CounterScreen = () => {
     </View>
   );
 };
+
+CounterScreen.navigationOptions = {
+  headerTitle: 'Counter'
+}
 
 const styles = StyleSheet.create({
   container: {

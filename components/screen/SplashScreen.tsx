@@ -11,7 +11,7 @@ import {
 import Paragraph from '../presentation/Paragraph';
 
 interface Props {
-  navigation: NavigationStackProp<{screen: string}>;
+  navigation?: NavigationStackProp;
 }
 
 const SplashScreen: NavigationStackScreenComponent<Props> = (props) => {

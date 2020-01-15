@@ -44,7 +44,6 @@ const MainNavigator = createStackNavigator(
       headerTitleStyle: {
         fontWeight: 'bold',
       },
-      tabBarLabel: 'Main Stack Nav',
     },
   },
 );

@@ -9,9 +9,10 @@ import {
   NavigationStackScreenComponent,
 } from 'react-navigation-stack'
 import Paragraph from '../presentation/Paragraph';
+import { withNavigation } from 'react-navigation';
 
 interface Props {
-  navigation?: NavigationStackProp;
+  navigation: NavigationStackProp;
 }
 
 const SplashScreen: NavigationStackScreenComponent<Props> = (props) => {
@@ -56,4 +57,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SplashScreen;
+export default withNavigation(SplashScreen);

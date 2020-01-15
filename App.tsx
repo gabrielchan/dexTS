@@ -14,6 +14,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import UnhelpfulThoughtsScreen from './components/screen/UnhelpfulThoughtsScreen';
 import SplashScreen from './components/screen/SplashScreen';
 import CounterScreen from './components/screen/CounterScreen';
+import VoidScreen from './components/screen/VoidScreen';
 
 /*
 import testData from './test_data/sampleCardData.json'; //testData is a JSON Array (not a JSON Object)
@@ -33,6 +34,7 @@ const MainNavigator = createStackNavigator(
     Splash: { screen: SplashScreen },
     UnhelpfulThoughts: { screen: UnhelpfulThoughtsScreen },
     Counter: { screen: CounterScreen },
+    Void: { screen: VoidScreen },
   },
   {
     initialRouteName: 'Splash',

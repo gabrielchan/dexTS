@@ -30,6 +30,11 @@ const SplashScreen: NavigationStackScreenComponent<Props> = (props) => {
           onPress={() => props.navigation.navigate('Counter')}
           buttonStyle={styles.button}
         />
+        <Button
+          title="Messenger"
+          onPress={() => props.navigation.navigate('Void')}
+          buttonStyle={styles.button}
+        />
       </View>
     </View>
   );

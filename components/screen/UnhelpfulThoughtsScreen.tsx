@@ -5,8 +5,8 @@ import { NavigationStackScreenComponent } from 'react-navigation-stack';
 
 const UnhelpfulThoughtsScreen: NavigationStackScreenComponent = () => {
   const thoughtsArray = MainDecoder("Unhelpful Thoughts");
-  return(
-    <CardList cardList={thoughtsArray}/>
+  return (
+    <CardList cardList={thoughtsArray} />
   );
 }
 

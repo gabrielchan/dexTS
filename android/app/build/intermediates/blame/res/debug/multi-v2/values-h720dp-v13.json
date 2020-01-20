@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/gchb/Documents/Code/dexTS/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "D:\\Code\\dexTS\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h720dp-v13\\values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/gchb/.gradle/caches/transforms-2/files-2.1/a55571903cc266f98a67a215f78ee131/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "source": "C:\\Users\\Gabriel C\\.gradle\\caches\\transforms-2\\files-2.1\\c2170576abe5a2c4a2a7e2733425770d\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,35 +1,23 @@
-import React from 'react';
-import {
-  View,
-  StyleSheet,
-} from 'react-native'
-import {
-  Text, 
-  Divider,
-} from 'react-native-elements'
+import React, { useState } from 'react';
+import { 
+  GiftedChat, 
+  IMessage 
+} from 'react-native-gifted-chat'
 
-interface Props {
-  user: string,
-  message: string,
-};
+const Message: React.FC = () => {
+  const [messages, setMessages] = useState<IMessage[] | undefined>([]);
 
-const Message: React.FC<Props> = (prop) => {
+  const onSend = (newMessage: IMessage[] = []) => {
+    setMessages(GiftedChat.append(messages, newMessage));
+  }
+  
   return (
-    <View style={styles.container}>
-      <Text style={styles.user}>{prop.user}</Text>
-      <Text>{prop.message}</Text>
-      <Divider/>
-    </View>
+    <GiftedChat
+      messages={messages}
+      onSend={newMessage => onSend(newMessage)}
+      user={{_id: 1}}
+    />
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  user: {
-    fontWeight: 'bold'
-  }
-});
 
 export default Message;

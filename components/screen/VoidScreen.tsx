@@ -14,18 +14,15 @@ const VoidScreen: NavigationStackScreenComponent = () => {
   );
 };
 
-
+VoidScreen.navigationOptions = {
+  headerTitle: 'Messaging Rant'
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    margin: 10
   },
-  inputBoxContainer: {
-    flexGrow: 1,
-    justifyContent: 'space-between',
-    flexDirection: 'column',
-    alignSelf: 'stretch'
-  }
 });
 
 export default VoidScreen;

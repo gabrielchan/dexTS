@@ -40,9 +40,9 @@ const MainNavigator = createStackNavigator(
     initialRouteName: 'Splash',
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: '#f4511e',
+        backgroundColor: '#1F1A24',
       },
-      headerTintColor: '#fff',
+      headerTintColor: '#BB86FC',
       headerTitleStyle: {
         fontWeight: 'bold',
       },

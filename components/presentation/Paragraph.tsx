@@ -9,16 +9,16 @@ const Paragraph = () => {
   return (
     <View style={styles.textContainer}>
       <Text style={styles.title}>Values</Text>
-      <Text>Empathy, Honesty, Respect, and Curiosity</Text>
+      <Text style={styles.text}>Empathy, Honesty, Respect, and Curiosity</Text>
       <Text style={styles.title}>Value-Driven Commandments</Text>
-      <Text>
+      <Text style={styles.text}>
         1. [Honesty] Love oneself{'\n'}
         2. [Curiosity] Enjoy the Journey {'\n'}
         3. [Respect] Alone time is an opportunity to grow{'\n'}
         4. [Empathy] Feel ones feelings and address them healthily{'\n'}
       </Text>
       <Text style={styles.title}>Why Am I Walking Down this Path?</Text>
-      <Text>
+      <Text style={styles.text}>
         After a tough but triumphant 2019 year, I've come to realize that I want to center my life around the four key values.
         With work, I have decided to <Text style={{ fontWeight: 'bold' }}> become a Developer</Text> because I've always had a
         curiosity to Mathematics and problems. This application represents:{'\n'}
@@ -37,11 +37,15 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    margin: 10
+    margin: 10,
   },
   title: {
-    fontSize: 30
+    fontSize: 30,
+    color: '#FFFFFF'
   },
+  text: {
+    color: '#FFFFFF'
+  }
 });
 
 export default Paragraph;

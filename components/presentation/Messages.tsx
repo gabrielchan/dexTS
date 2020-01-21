@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  GiftedChat, 
+import {
+  GiftedChat,
   IMessage,
-  Bubble, 
+  Bubble,
+  BubbleProps,
+  Time,
+  TimeProps,
 } from 'react-native-gifted-chat'
+import { StyleSheet } from 'react-native';
+import DarkThemeColors from '../../config/themes/DarkThemeColors'
 
 const systemMessage = {
   _id: 'Default System Message',
@@ -20,15 +25,58 @@ const Message: React.FC = () => {
 
   const onSend = (newMessage: IMessage[] = []) => {
     setMessages(GiftedChat.append(messages, newMessage));
-  }
-  
+  };
+
+  const renderTime = (props: Readonly<TimeProps<IMessage>>) => {
+    return (
+      <Time
+        {...props}
+        timeTextStyle={
+          {
+            left: { color: 'white' },
+            right: { color: DarkThemeColors.onPrimary }
+          }
+        }
+      />
+    );
+  };
+
+  const renderBubble = (props: Readonly<BubbleProps<IMessage>>) => {
+    return (
+      <Bubble
+        {...props}
+        wrapperStyle={
+          {
+            left: { backgroundColor: 'darkgrey' },
+            right: { backgroundColor: DarkThemeColors.primary }
+          }
+        }
+        textStyle={
+          {
+            left: { color: 'white' },
+            right: { color: DarkThemeColors.onPrimary }
+          }
+        }
+      />
+    )
+  };
+
   return (
     <GiftedChat
       messages={messages}
       onSend={newMessage => onSend(newMessage)}
-      user={{_id: 'User'}}
+      user={{ _id: 'User' }}
+      renderBubble={renderBubble}
+      renderTime={renderTime}
     />
   );
 };
+
+const styles = StyleSheet.create({
+  userBubble: {
+    backgroundColor: DarkThemeColors.primary,
+    color: DarkThemeColors.onPrimary
+  }
+});
 
 export default Message;

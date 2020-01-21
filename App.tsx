@@ -15,19 +15,7 @@ import UnhelpfulThoughtsScreen from './components/screen/UnhelpfulThoughtsScreen
 import SplashScreen from './components/screen/SplashScreen';
 import CounterScreen from './components/screen/CounterScreen';
 import VoidScreen from './components/screen/VoidScreen';
-
-/*
-import testData from './test_data/sampleCardData.json'; //testData is a JSON Array (not a JSON Object)
-*/
-
-/*
-const App = () => {
-  const usingHermes = typeof HermesInternal === 'object' && HermesInternal !== null;
-  return (
-    <CardList cardList={testData} />
-  );
-};
-*/
+import DarkThemeColors from './config/themes/DarkThemeColors';
 
 const MainNavigator = createStackNavigator(
   {
@@ -40,9 +28,9 @@ const MainNavigator = createStackNavigator(
     initialRouteName: 'Splash',
     defaultNavigationOptions: {
       headerStyle: {
-        backgroundColor: '#1F1A24',
+        backgroundColor: DarkThemeColors.surface,
       },
-      headerTintColor: '#BB86FC',
+      headerTintColor: DarkThemeColors.onSurface,
       headerTitleStyle: {
         fontWeight: 'bold',
       },

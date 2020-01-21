@@ -8,6 +8,7 @@ import {
   Card,
   Text,
 } from 'react-native-elements';
+import DarkThemeColors from '../../config/themes/DarkThemeColors'
 
 export interface CardItems {
   header: string,
@@ -21,39 +22,43 @@ interface Props {
 
 const CardList: React.FC<Props> = (props) => {
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={props.cardList}
-        keyExtractor={(item) => item.header}
-        renderItem={({ item }) =>
-          <Card
-            title={item.header}>
-            <Text style={styles.content}>
-              {item.content}
-            </Text>
-            <Text style={styles.subcontent}>
-              {item.subcontent}
-            </Text>
-          </Card>
-        }
-      />
-    </View>
+    <FlatList
+      data={props.cardList}
+      keyExtractor={(item) => item.header}
+      renderItem={({ item }) =>
+        <Card
+          containerStyle={styles.container}
+          titleStyle={styles.title}
+          title={item.header}>
+          <Text style={styles.content}>
+            {item.content}
+          </Text>
+          <Text style={styles.subcontent}>
+            {item.subcontent}
+          </Text>
+        </Card>
+      }
+    />
   );
 }
 
 const styles = StyleSheet.create({
   subcontent: {
     marginBottom: 10,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color: DarkThemeColors.onSurface
+  },
+  title: {
+    color: DarkThemeColors.primary
   },
   content: {
     marginBottom: 10,
-    color: "grey"
+    color: 'darkgrey'
   },
   container: {
-    flex: 1,
-    marginTop: 10,
-    marginBottom: 10,
+    marginTop: 5,
+    marginBottom: 5,
+    backgroundColor: DarkThemeColors.surface
   },
 });
 

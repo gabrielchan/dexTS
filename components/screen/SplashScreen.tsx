@@ -10,6 +10,7 @@ import {
 } from 'react-navigation-stack'
 import Paragraph from '../presentation/Paragraph';
 import { withNavigation } from 'react-navigation';
+import DarkThemeColors from '../../config/themes/DarkThemeColors';
 
 interface Props {
   navigation: NavigationStackProp;
@@ -24,16 +25,19 @@ const SplashScreen: NavigationStackScreenComponent<Props> = (props) => {
           title="Unhelpful Thoughts"
           onPress={() => props.navigation.navigate('UnhelpfulThoughts')}
           buttonStyle={styles.button}
+          titleStyle={styles.text}
         />
         <Button
           title="Counter"
           onPress={() => props.navigation.navigate('Counter')}
           buttonStyle={styles.button}
+          titleStyle={styles.text}
         />
         <Button
           title="Messenger"
           onPress={() => props.navigation.navigate('Void')}
           buttonStyle={styles.button}
+          titleStyle={styles.text}
         />
       </View>
     </View>
@@ -49,17 +53,21 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-start',
-    backgroundColor: '#121212'
+    backgroundColor: DarkThemeColors.background,
   },
   buttonContainer: {
     flex: 1,
     alignItems: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-evenly',
     margin: 10
   },
   button: {
     margin: 5,
+    backgroundColor: DarkThemeColors.primary
+  },
+  text: {
+    color: DarkThemeColors.onPrimary
   }
 });
 

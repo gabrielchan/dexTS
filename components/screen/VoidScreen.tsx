@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 import { NavigationStackScreenComponent } from 'react-navigation-stack';
 import Message from '../presentation/Messages';
+import DarkThemeColors from '../../config/themes/DarkThemeColors';
 
 const VoidScreen: NavigationStackScreenComponent = () => {
   return (
@@ -21,7 +22,7 @@ VoidScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#121212'
+    backgroundColor: DarkThemeColors.background
   },
 });
 

@@ -6,6 +6,8 @@ import {
   BubbleProps,
   Time,
   TimeProps,
+  InputToolbar,
+  InputToolbarProps,
 } from 'react-native-gifted-chat'
 import { StyleSheet } from 'react-native';
 import DarkThemeColors from '../../config/themes/DarkThemeColors'
@@ -61,6 +63,15 @@ const Message: React.FC = () => {
     )
   };
 
+  const renderInputToolbar = (props: any) => {
+    return(
+      <InputToolbar
+        {...props}
+        primaryStyle={{ backgroundColor: DarkThemeColors.surface }}
+      />
+    )
+  }
+
   return (
     <GiftedChat
       messages={messages}
@@ -68,6 +79,7 @@ const Message: React.FC = () => {
       user={{ _id: 'User' }}
       renderBubble={renderBubble}
       renderTime={renderTime}
+      renderInputToolbar={renderInputToolbar}
     />
   );
 };

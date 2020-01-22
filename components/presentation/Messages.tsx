@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   GiftedChat,
   IMessage,
@@ -8,8 +8,9 @@ import {
   TimeProps,
   InputToolbar,
   InputToolbarProps,
+  Composer,
+  ComposerProps,
 } from 'react-native-gifted-chat'
-import { StyleSheet } from 'react-native';
 import DarkThemeColors from '../../config/themes/DarkThemeColors'
 
 const systemMessage = {
@@ -29,7 +30,7 @@ const Message: React.FC = () => {
     setMessages(GiftedChat.append(messages, newMessage));
   };
 
-  const renderTime = (props: Readonly<TimeProps<IMessage>>) => {
+  const renderTime = (props: TimeProps<IMessage>) => {
     return (
       <Time
         {...props}
@@ -43,7 +44,7 @@ const Message: React.FC = () => {
     );
   };
 
-  const renderBubble = (props: Readonly<BubbleProps<IMessage>>) => {
+  const renderBubble = (props: BubbleProps<IMessage>) => {
     return (
       <Bubble
         {...props}
@@ -63,11 +64,17 @@ const Message: React.FC = () => {
     )
   };
 
-  const renderInputToolbar = (props: any) => {
+  const renderInputToolbar = (props: InputToolbarProps) => {
     return(
       <InputToolbar
         {...props}
         primaryStyle={{ backgroundColor: DarkThemeColors.surface }}
+        renderComposer={props => (
+          <Composer
+            {...props}
+            textInputStyle={{color: DarkThemeColors.onSurface}}
+          />
+        )}
       />
     )
   }
@@ -83,12 +90,5 @@ const Message: React.FC = () => {
     />
   );
 };
-
-const styles = StyleSheet.create({
-  userBubble: {
-    backgroundColor: DarkThemeColors.primary,
-    color: DarkThemeColors.onPrimary
-  }
-});
 
 export default Message;

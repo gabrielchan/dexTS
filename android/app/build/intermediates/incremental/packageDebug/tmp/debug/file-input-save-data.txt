@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jan 21 09:14:12 EST 2020
+#Wed Jan 22 09:09:53 EST 2020
 56.path=lib/x86_64/libc++_shared.so
 5.base=/Users/gchb/Documents/Code/dexTS/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 42.base=/Users/gchb/Documents/Code/dexTS/android/app/build/intermediates/transforms/mergeJniLibs/debug/0

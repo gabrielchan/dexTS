@@ -1,1 +1,4 @@
 *.pbxproj -text
+
+*.tsx linguist-language=TypeScript
+*.js linguist-language=JavaScript

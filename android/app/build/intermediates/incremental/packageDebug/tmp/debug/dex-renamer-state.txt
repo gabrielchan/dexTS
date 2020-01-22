@@ -1,4 +1,4 @@
-#Tue Jan 21 20:39:13 EST 2020
-base.0=D\:\\Code\\dexTS\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Wed Jan 22 09:09:53 EST 2020
+base.0=/Users/gchb/Documents/Code/dexTS/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

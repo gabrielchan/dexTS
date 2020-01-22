@@ -8,8 +8,9 @@ import {
   TimeProps,
   InputToolbar,
   InputToolbarProps,
+  Composer,
+  ComposerProps,
 } from 'react-native-gifted-chat'
-import { ActivityIndicator } from 'react-native';
 import DarkThemeColors from '../../config/themes/DarkThemeColors'
 
 const systemMessage = {
@@ -68,13 +69,18 @@ const Message: React.FC = () => {
       <InputToolbar
         {...props}
         primaryStyle={{ backgroundColor: DarkThemeColors.surface }}
+        renderComposer={props => (
+          <Composer
+            {...props}
+            textInputStyle={{color: DarkThemeColors.onSurface}}
+          />
+        )}
       />
     )
   }
 
   return (
     <GiftedChat
-      renderLoading={() => <ActivityIndicator size="large" color={DarkThemeColors.error}/>}
       messages={messages}
       onSend={newMessage => onSend(newMessage)}
       user={{ _id: 'User' }}

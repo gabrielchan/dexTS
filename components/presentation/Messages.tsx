@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   GiftedChat,
   IMessage,
@@ -9,7 +9,7 @@ import {
   InputToolbar,
   InputToolbarProps,
 } from 'react-native-gifted-chat'
-import { StyleSheet } from 'react-native';
+import { ActivityIndicator } from 'react-native';
 import DarkThemeColors from '../../config/themes/DarkThemeColors'
 
 const systemMessage = {
@@ -29,7 +29,7 @@ const Message: React.FC = () => {
     setMessages(GiftedChat.append(messages, newMessage));
   };
 
-  const renderTime = (props: Readonly<TimeProps<IMessage>>) => {
+  const renderTime = (props: TimeProps<IMessage>) => {
     return (
       <Time
         {...props}
@@ -43,7 +43,7 @@ const Message: React.FC = () => {
     );
   };
 
-  const renderBubble = (props: Readonly<BubbleProps<IMessage>>) => {
+  const renderBubble = (props: BubbleProps<IMessage>) => {
     return (
       <Bubble
         {...props}
@@ -63,7 +63,7 @@ const Message: React.FC = () => {
     )
   };
 
-  const renderInputToolbar = (props: any) => {
+  const renderInputToolbar = (props: InputToolbarProps) => {
     return(
       <InputToolbar
         {...props}
@@ -74,21 +74,16 @@ const Message: React.FC = () => {
 
   return (
     <GiftedChat
+      renderLoading={() => <ActivityIndicator size="large" color={DarkThemeColors.error}/>}
       messages={messages}
       onSend={newMessage => onSend(newMessage)}
       user={{ _id: 'User' }}
       renderBubble={renderBubble}
       renderTime={renderTime}
       renderInputToolbar={renderInputToolbar}
+      textInputProps={{style: { color: 'white' }}}
     />
   );
 };
-
-const styles = StyleSheet.create({
-  userBubble: {
-    backgroundColor: DarkThemeColors.primary,
-    color: DarkThemeColors.onPrimary
-  }
-});
 
 export default Message;

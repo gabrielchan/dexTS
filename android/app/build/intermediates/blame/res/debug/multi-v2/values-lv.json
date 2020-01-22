@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/gchb/Documents/Code/dexTS/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml",
+            "outputFile": "D:\\Code\\dexTS\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lv\\values-lv.xml",
             "map": [
                 {
-                    "source": "/Users/gchb/.gradle/caches/transforms-2/files-2.1/7087e2054ec0b27f3ec4a0a2e5724590/res/values-lv/values-lv.xml",
+                    "source": "C:\\Users\\Gabriel C\\.gradle\\caches\\transforms-2\\files-2.1\\b769fa9e7b47961863acf3970bd4d9a6\\res\\values-lv\\values-lv.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/gchb/.gradle/caches/transforms-2/files-2.1/a55571903cc266f98a67a215f78ee131/res/values-lv/values-lv.xml",
+                    "source": "C:\\Users\\Gabriel C\\.gradle\\caches\\transforms-2\\files-2.1\\c2170576abe5a2c4a2a7e2733425770d\\res\\values-lv\\values-lv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

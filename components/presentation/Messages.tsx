@@ -81,7 +81,6 @@ const Message: React.FC = () => {
       renderBubble={renderBubble}
       renderTime={renderTime}
       renderInputToolbar={renderInputToolbar}
-      textInputProps={{style: { color: 'white' }}}
     />
   );
 };

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.5",
-    "acorn": "^7.1.0",
+    "acorn": "^7.1.1",
     "eslint": "^5.16.0",
     "mobx": "^5.15.1",
     "mobx-react-lite": "^1.5.2",
